@@ -55,7 +55,6 @@
             this.numShotEvery = new System.Windows.Forms.NumericUpDown();
             this.lblMe = new System.Windows.Forms.Label();
             this.lblWebsite = new System.Windows.Forms.Label();
-            this.lblGithub = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numShotEvery)).BeginInit();
@@ -63,39 +62,39 @@
             // 
             // gbOptions
             // 
-            this.gbOptions.Location = new System.Drawing.Point(723, 14);
+            this.gbOptions.Location = new System.Drawing.Point(723, 13);
             this.gbOptions.Name = "gbOptions";
-            this.gbOptions.Size = new System.Drawing.Size(114, 112);
+            this.gbOptions.Size = new System.Drawing.Size(114, 103);
             this.gbOptions.TabIndex = 0;
             this.gbOptions.TabStop = false;
             this.gbOptions.Text = "Server Options";
             // 
             // gbLog
             // 
-            this.gbLog.Location = new System.Drawing.Point(723, 337);
+            this.gbLog.Location = new System.Drawing.Point(723, 311);
             this.gbLog.Name = "gbLog";
-            this.gbLog.Size = new System.Drawing.Size(409, 120);
+            this.gbLog.Size = new System.Drawing.Size(409, 111);
             this.gbLog.TabIndex = 1;
             this.gbLog.TabStop = false;
             this.gbLog.Text = "Log";
             // 
             // gbPreview
             // 
-            this.gbPreview.Location = new System.Drawing.Point(723, 142);
+            this.gbPreview.Location = new System.Drawing.Point(723, 131);
             this.gbPreview.Name = "gbPreview";
-            this.gbPreview.Size = new System.Drawing.Size(409, 189);
+            this.gbPreview.Size = new System.Drawing.Size(409, 174);
             this.gbPreview.TabIndex = 2;
             this.gbPreview.TabStop = false;
             this.gbPreview.Text = "Preview";
             // 
             // txtLog
             // 
-            this.txtLog.Location = new System.Drawing.Point(6, 236);
+            this.txtLog.Location = new System.Drawing.Point(6, 218);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(379, 139);
+            this.txtLog.Size = new System.Drawing.Size(379, 129);
             this.txtLog.TabIndex = 3;
             this.txtLog.TextChanged += new System.EventHandler(this.txtLog_TextChanged);
             // 
@@ -103,9 +102,9 @@
             // 
             this.imgPreview.Image = global::ScreenTask.Properties.Resources.imgPrev;
             this.imgPreview.InitialImage = global::ScreenTask.Properties.Resources.imgPrev;
-            this.imgPreview.Location = new System.Drawing.Point(398, 235);
+            this.imgPreview.Location = new System.Drawing.Point(398, 217);
             this.imgPreview.Name = "imgPreview";
-            this.imgPreview.Size = new System.Drawing.Size(210, 140);
+            this.imgPreview.Size = new System.Drawing.Size(210, 129);
             this.imgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPreview.TabIndex = 4;
             this.imgPreview.TabStop = false;
@@ -114,29 +113,30 @@
             // pnlOptions
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlOptions.Location = new System.Drawing.Point(878, 28);
+            this.pnlOptions.Location = new System.Drawing.Point(878, 26);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(92, 56);
+            this.pnlOptions.Size = new System.Drawing.Size(92, 52);
             this.pnlOptions.TabIndex = 5;
             // 
             // comboIPs
             // 
             this.comboIPs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboIPs.FormattingEnabled = true;
-            this.comboIPs.Location = new System.Drawing.Point(47, 87);
+            this.comboIPs.Location = new System.Drawing.Point(47, 80);
             this.comboIPs.Name = "comboIPs";
-            this.comboIPs.Size = new System.Drawing.Size(215, 21);
+            this.comboIPs.Size = new System.Drawing.Size(215, 20);
             this.comboIPs.TabIndex = 27;
+            this.comboIPs.SelectedIndexChanged += new System.EventHandler(this.comboIPs_SelectedIndexChanged);
             // 
             // cbCaptureMouse
             // 
             this.cbCaptureMouse.AutoSize = true;
             this.cbCaptureMouse.BackColor = System.Drawing.Color.Transparent;
-            this.cbCaptureMouse.Location = new System.Drawing.Point(400, 155);
+            this.cbCaptureMouse.Location = new System.Drawing.Point(400, 109);
             this.cbCaptureMouse.Name = "cbCaptureMouse";
-            this.cbCaptureMouse.Size = new System.Drawing.Size(136, 17);
+            this.cbCaptureMouse.Size = new System.Drawing.Size(72, 16);
             this.cbCaptureMouse.TabIndex = 26;
-            this.cbCaptureMouse.Text = "Capture Mouse Pointer";
+            this.cbCaptureMouse.Text = "显示鼠标";
             this.cbCaptureMouse.UseVisualStyleBackColor = false;
             this.cbCaptureMouse.CheckedChanged += new System.EventHandler(this.cbCaptureMouse_CheckedChanged);
             // 
@@ -144,11 +144,11 @@
             // 
             this.cbPreview.AutoSize = true;
             this.cbPreview.BackColor = System.Drawing.Color.Transparent;
-            this.cbPreview.Location = new System.Drawing.Point(400, 216);
+            this.cbPreview.Location = new System.Drawing.Point(400, 199);
             this.cbPreview.Name = "cbPreview";
-            this.cbPreview.Size = new System.Drawing.Size(64, 17);
+            this.cbPreview.Size = new System.Drawing.Size(48, 16);
             this.cbPreview.TabIndex = 25;
-            this.cbPreview.Text = "Preview";
+            this.cbPreview.Text = "预览";
             this.cbPreview.UseVisualStyleBackColor = false;
             this.cbPreview.CheckedChanged += new System.EventHandler(this.cbPreview_CheckedChanged);
             // 
@@ -158,9 +158,9 @@
             this.btnStopServer.Enabled = false;
             this.btnStopServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStopServer.ForeColor = System.Drawing.Color.White;
-            this.btnStopServer.Location = new System.Drawing.Point(152, 196);
+            this.btnStopServer.Location = new System.Drawing.Point(152, 181);
             this.btnStopServer.Name = "btnStopServer";
-            this.btnStopServer.Size = new System.Drawing.Size(130, 23);
+            this.btnStopServer.Size = new System.Drawing.Size(130, 21);
             this.btnStopServer.TabIndex = 24;
             this.btnStopServer.Text = "Stop Server";
             this.btnStopServer.UseVisualStyleBackColor = false;
@@ -169,73 +169,75 @@
             // 
             // btnStartServer
             // 
-            this.btnStartServer.BackColor = System.Drawing.Color.Gray;
+            this.btnStartServer.BackColor = System.Drawing.Color.Green;
             this.btnStartServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartServer.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnStartServer.ForeColor = System.Drawing.Color.White;
-            this.btnStartServer.Location = new System.Drawing.Point(114, 192);
+            this.btnStartServer.Location = new System.Drawing.Point(114, 180);
             this.btnStartServer.Name = "btnStartServer";
-            this.btnStartServer.Size = new System.Drawing.Size(202, 30);
+            this.btnStartServer.Size = new System.Drawing.Size(202, 28);
             this.btnStartServer.TabIndex = 23;
             this.btnStartServer.Tag = "start";
-            this.btnStartServer.Text = "Start Server";
+            this.btnStartServer.Text = "开始共享";
             this.btnStartServer.UseVisualStyleBackColor = false;
             this.btnStartServer.Click += new System.EventHandler(this.btnStartServer_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Enabled = false;
-            this.txtPassword.Location = new System.Drawing.Point(319, 156);
+            this.txtPassword.Location = new System.Drawing.Point(319, 144);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(66, 20);
+            this.txtPassword.Size = new System.Drawing.Size(66, 21);
             this.txtPassword.TabIndex = 22;
             this.txtPassword.Text = "task";
             // 
             // txtUser
             // 
             this.txtUser.Enabled = false;
-            this.txtUser.Location = new System.Drawing.Point(183, 156);
+            this.txtUser.Location = new System.Drawing.Point(183, 144);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(66, 20);
+            this.txtUser.Size = new System.Drawing.Size(66, 21);
             this.txtUser.TabIndex = 21;
             this.txtUser.Text = "screen";
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(255, 159);
+            this.label4.Location = new System.Drawing.Point(277, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Password : ";
+            this.label4.Text = "密码: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(147, 159);
+            this.label3.Location = new System.Drawing.Point(124, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 19;
-            this.label3.Text = "User : ";
+            this.label3.Text = "用户名 : ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbPrivate
             // 
             this.cbPrivate.AutoSize = true;
             this.cbPrivate.BackColor = System.Drawing.Color.Transparent;
-            this.cbPrivate.Location = new System.Drawing.Point(47, 158);
+            this.cbPrivate.Location = new System.Drawing.Point(47, 146);
             this.cbPrivate.Name = "cbPrivate";
-            this.cbPrivate.Size = new System.Drawing.Size(88, 17);
+            this.cbPrivate.Size = new System.Drawing.Size(48, 16);
             this.cbPrivate.TabIndex = 18;
-            this.cbPrivate.Text = "Private Task ";
+            this.cbPrivate.Text = "加密";
             this.cbPrivate.UseVisualStyleBackColor = false;
             this.cbPrivate.CheckedChanged += new System.EventHandler(this.cbPrivate_CheckedChanged);
             // 
             // numPort
             // 
-            this.numPort.Location = new System.Drawing.Point(307, 88);
+            this.numPort.Location = new System.Drawing.Point(307, 81);
             this.numPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -247,7 +249,7 @@
             0,
             0});
             this.numPort.Name = "numPort";
-            this.numPort.Size = new System.Drawing.Size(78, 20);
+            this.numPort.Size = new System.Drawing.Size(78, 21);
             this.numPort.TabIndex = 1;
             this.numPort.Value = new decimal(new int[] {
             7070,
@@ -259,18 +261,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(268, 90);
+            this.label2.Location = new System.Drawing.Point(268, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 16;
             this.label2.Text = "Port :";
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(47, 117);
+            this.txtURL.Location = new System.Drawing.Point(47, 108);
             this.txtURL.Name = "txtURL";
             this.txtURL.ReadOnly = true;
-            this.txtURL.Size = new System.Drawing.Size(338, 20);
+            this.txtURL.Size = new System.Drawing.Size(338, 21);
             this.txtURL.TabIndex = 17;
             this.txtURL.Text = "the URL will displayed here after starting the server...";
             // 
@@ -278,9 +280,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(8, 118);
+            this.label1.Location = new System.Drawing.Point(8, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(35, 12);
             this.label1.TabIndex = 14;
             this.label1.Text = "URL :";
             // 
@@ -288,9 +290,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(11, 88);
+            this.label5.Location = new System.Drawing.Point(11, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 28;
             this.label5.Text = "IP :";
             // 
@@ -300,11 +302,11 @@
             this.cbScreenshotEvery.BackColor = System.Drawing.Color.Transparent;
             this.cbScreenshotEvery.Checked = true;
             this.cbScreenshotEvery.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbScreenshotEvery.Location = new System.Drawing.Point(400, 86);
+            this.cbScreenshotEvery.Location = new System.Drawing.Point(401, 80);
             this.cbScreenshotEvery.Name = "cbScreenshotEvery";
-            this.cbScreenshotEvery.Size = new System.Drawing.Size(144, 17);
+            this.cbScreenshotEvery.Size = new System.Drawing.Size(48, 16);
             this.cbScreenshotEvery.TabIndex = 29;
-            this.cbScreenshotEvery.Text = "Take Screenshot Every :";
+            this.cbScreenshotEvery.Text = "频率";
             this.cbScreenshotEvery.UseVisualStyleBackColor = false;
             this.cbScreenshotEvery.CheckedChanged += new System.EventHandler(this.cbScreenshotEvery_CheckedChanged);
             // 
@@ -312,11 +314,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(501, 118);
+            this.label6.Location = new System.Drawing.Point(534, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.Size = new System.Drawing.Size(17, 12);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Mellisecond";
+            this.label6.Text = "ms";
             // 
             // numShotEvery
             // 
@@ -325,7 +327,7 @@
             0,
             0,
             0});
-            this.numShotEvery.Location = new System.Drawing.Point(421, 116);
+            this.numShotEvery.Location = new System.Drawing.Point(454, 78);
             this.numShotEvery.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -337,7 +339,7 @@
             0,
             0});
             this.numShotEvery.Name = "numShotEvery";
-            this.numShotEvery.Size = new System.Drawing.Size(74, 20);
+            this.numShotEvery.Size = new System.Drawing.Size(74, 21);
             this.numShotEvery.TabIndex = 30;
             this.numShotEvery.ThousandsSeparator = true;
             this.numShotEvery.Value = new decimal(new int[] {
@@ -350,42 +352,33 @@
             // 
             this.lblMe.AutoSize = true;
             this.lblMe.BackColor = System.Drawing.Color.Transparent;
-            this.lblMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblMe.Location = new System.Drawing.Point(468, 391);
+            this.lblMe.ForeColor = System.Drawing.Color.Gray;
+            this.lblMe.Location = new System.Drawing.Point(468, 361);
             this.lblMe.Name = "lblMe";
-            this.lblMe.Size = new System.Drawing.Size(138, 13);
+            this.lblMe.Size = new System.Drawing.Size(119, 12);
             this.lblMe.TabIndex = 32;
-            this.lblMe.Text = "Coded by : Eslam Hamouda";
+            this.lblMe.Text = "copy right : yliyun";
             this.lblMe.Click += new System.EventHandler(this.lblMe_Click);
             // 
             // lblWebsite
             // 
             this.lblWebsite.BackColor = System.Drawing.Color.Transparent;
-            this.lblWebsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblWebsite.Location = new System.Drawing.Point(33, 384);
+            this.lblWebsite.ForeColor = System.Drawing.Color.Gray;
+            this.lblWebsite.Location = new System.Drawing.Point(33, 354);
             this.lblWebsite.Name = "lblWebsite";
-            this.lblWebsite.Size = new System.Drawing.Size(180, 24);
+            this.lblWebsite.Size = new System.Drawing.Size(180, 22);
             this.lblWebsite.TabIndex = 33;
-            this.lblWebsite.Text = "2014 | eslamx.com";
+            this.lblWebsite.Text = "2016 | http://www.yliyun.com";
             this.lblWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblWebsite.Click += new System.EventHandler(this.lblWebsite_Click);
             // 
-            // lblGithub
-            // 
-            this.lblGithub.BackColor = System.Drawing.Color.Transparent;
-            this.lblGithub.Location = new System.Drawing.Point(538, 9);
-            this.lblGithub.Name = "lblGithub";
-            this.lblGithub.Size = new System.Drawing.Size(79, 56);
-            this.lblGithub.TabIndex = 34;
-            this.lblGithub.Click += new System.EventHandler(this.lblGithub_Click);
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ScreenTask.Properties.Resources.ScreenTaskBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(617, 410);
+            this.ClientSize = new System.Drawing.Size(617, 378);
             this.Controls.Add(this.imgPreview);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.gbPreview);
@@ -410,7 +403,6 @@
             this.Controls.Add(this.cbCaptureMouse);
             this.Controls.Add(this.cbPreview);
             this.Controls.Add(this.btnStopServer);
-            this.Controls.Add(this.lblGithub);
             this.Controls.Add(this.lblWebsite);
             this.Controls.Add(this.lblMe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -456,7 +448,6 @@
         private System.Windows.Forms.NumericUpDown numShotEvery;
         private System.Windows.Forms.Label lblMe;
         private System.Windows.Forms.Label lblWebsite;
-        private System.Windows.Forms.Label lblGithub;
     }
 }
 

@@ -48,7 +48,8 @@ namespace ScreenTask
             if (btnStartServer.Tag.ToString() != "start")
             {
                 btnStartServer.Tag = "start";
-                btnStartServer.Text = "Start Server";
+                btnStartServer.Text = "开始共享";
+                btnStartServer.BackColor = System.Drawing.Color.Green;
                 isWorking = false;
                 isTakingScreenshots = false;
                 Log("Server Stoped.");
@@ -66,7 +67,8 @@ namespace ScreenTask
                 await AddFirewallRule((int)numPort.Value);
                 Task.Factory.StartNew(() => CaptureScreenEvery((int)numShotEvery.Value)).Wait();
                 btnStartServer.Tag = "stop";
-                btnStartServer.Text = "Stop Server";
+                btnStartServer.Text = "停止共享";
+                btnStartServer.BackColor = System.Drawing.Color.Red;
                 await StartServer();
 
             }
@@ -422,18 +424,33 @@ namespace ScreenTask
 
         private void lblWebsite_Click(object sender, EventArgs e)
         {
-            Process.Start("http://eslamx.com");
+            Process.Start("http://www.yliyun.com");
         }
 
         private void lblMe_Click(object sender, EventArgs e)
         {
-            Process.Start("http://facebook.com/EslaMx7");
-            Process.Start("http://twitter.com/EslaMx7");
+            Process.Start("http://www.yliyun.com/owner.html");
+            Process.Start("http://www.yliyun.com/blog");
         }
 
         private void lblGithub_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/EslaMx7/ScreenTask");
+        }
+
+        private void comboIPs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
 
